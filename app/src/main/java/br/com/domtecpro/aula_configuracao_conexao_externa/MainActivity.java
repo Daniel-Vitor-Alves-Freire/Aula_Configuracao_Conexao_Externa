@@ -1,9 +1,12 @@
 package br.com.domtecpro.aula_configuracao_conexao_externa;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -32,5 +35,16 @@ public class MainActivity extends AppCompatActivity {
             texto.setText("CONEXÃO FALHOU!!! " +
                     e.getMessage());
         }
+
+        AppCompatButton botaoEntrar = findViewById(R.id.btnEntrar);
+        botaoEntrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Implementar entrada
+                Intent it = new Intent(getApplicationContext(),
+                        MenuActivity.class);
+                startActivity(it);
+            }
+        });
     }
 }
