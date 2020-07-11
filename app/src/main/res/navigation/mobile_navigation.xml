@@ -22,4 +22,10 @@
         android:name="br.com.domtecpro.aula_configuracao_conexao_externa.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_cadastro"
+        android:name="br.com.domtecpro.aula_configuracao_conexao_externa.CadastroFragment"
+        android:label="@string/label_cadastro"
+        tools:layout="@layout/cadastro_fragment" />
 </navigation>

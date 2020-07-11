@@ -27,11 +27,14 @@ public class Conexao {
                     "jdbc:jtds:sqlserver://192.168.0.231;" +
                     "databaseName=PRAP3;user=sa;password=123456;");
 
-            /*// MYSQL
+            // MYSQL
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection(
+            /*conn = DriverManager.getConnection(
                     "jdbc:mysql://213.190.6.64:3306/u992616056_dadburger",
                     "u992616056_wilson","8902sb00");*/
+            /*conn = DriverManager.getConnection(
+                    "jdbc:mysql://187.45.196.191:3306/prap3mysql",
+                    "prap3mysql","master2211##");*/
 
         }catch(SQLException e){
             //e.getMessage();
