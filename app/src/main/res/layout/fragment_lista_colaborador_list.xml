@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_busca"
+        android:pointerIcon="hand"
+        app:queryHint="Digite o nome do colaborador"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:name="br.com.domtecpro.aula_configuracao_conexao_externa.ListaColaboradorFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="64dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".ListaColaboradorFragment"
+        tools:listitem="@layout/fragment_lista_colaborador" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+

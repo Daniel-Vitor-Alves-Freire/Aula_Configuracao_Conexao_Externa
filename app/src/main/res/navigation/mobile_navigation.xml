@@ -28,4 +28,9 @@
         android:name="br.com.domtecpro.aula_configuracao_conexao_externa.CadastroFragment"
         android:label="@string/label_cadastro"
         tools:layout="@layout/cadastro_fragment" />
+    <fragment
+        android:id="@+id/navigation_lista_colaborador"
+        android:name="br.com.domtecpro.aula_configuracao_conexao_externa.ListaColaboradorFragment"
+        android:label="@string/title_lista_colaboradores"
+        tools:layout="@layout/fragment_lista_colaborador_list" />
 </navigation>

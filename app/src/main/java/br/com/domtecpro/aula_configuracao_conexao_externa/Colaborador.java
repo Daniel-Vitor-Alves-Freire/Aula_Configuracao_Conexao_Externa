@@ -6,6 +6,13 @@ public class Colaborador {
     private String cargo;
     private int situacao;
 
+    public Colaborador(int id, String nome, String cargo, int situacao) {
+        this.id = id;
+        this.nome = nome;
+        this.cargo = cargo;
+        this.situacao = situacao;
+    }
+
     public Colaborador(String nome, String cargo, int situacao) {
         this.nome = nome;
         this.cargo = cargo;
