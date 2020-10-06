@@ -60,8 +60,8 @@ public class ColaboradorDao {
         return lista;
     }
 
-    public static List<Colaborador> pesquisarColaboradores(
-            String dado, Context contexto){
+    public static List<Colaborador> pesquisarColaboradores(String dado,
+                                                           Context contexto){
         // Listagem de colaboradores
         List<Colaborador> lista = null;
         // Objeto de declaração
@@ -71,10 +71,11 @@ public class ColaboradorDao {
             // Criação da declaração
             pst = Conexao.conectar(contexto).prepareStatement("" +
                     "Select id, nome, cargo, situacao " +
-                    "from Colaborador " +
-                    "Where nome like '%" + dado + "%' " +
-                    "Order by id ASC");
+                    " from Colaborador " +
+                    " Where nome like '%" + dado + "%' " +
+                    " Order by id ASC");
             // Execução da pesquisa e retorno das linhas
+            //pst.setString(1, dado);
             ResultSet res = pst.executeQuery();
             lista = new ArrayList<Colaborador>();
             while(res.next()){
@@ -92,4 +93,5 @@ public class ColaboradorDao {
 
         return lista;
     }
+
 }

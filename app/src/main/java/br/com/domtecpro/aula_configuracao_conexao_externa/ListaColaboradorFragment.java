@@ -57,31 +57,12 @@ public class ListaColaboradorFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_lista_colaborador_list, container, false);
 
-        svBusca = view.findViewById(R.id.sv_busca);
-
-        /*svBusca.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus==false){
-                    Context context = view.getContext();
-                    RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.list);
-                    if (mColumnCount <= 1) {
-                        recyclerView.setLayoutManager(new LinearLayoutManager(context));
-                    } else {
-                        recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
-                    }
-
-                    recyclerView.setAdapter(new MyColaboradorRecyclerViewAdapter(
-                                ColaboradorDao.pesquisarColaboradores(context)
-                        ));
-                }
-            }
-        });*/
+        svBusca = view.findViewById(R.id.sv_buscar);
 
         svBusca.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-
+                // buscar a lista com a query desejada
                 // Set the adapter
                 //if (view instanceof RecyclerView) {
                 Context context = view.getContext();
@@ -102,6 +83,7 @@ public class ListaColaboradorFragment extends Fragment {
                     ));
                 }
 
+
                 //}
 
                 return false;
@@ -109,12 +91,8 @@ public class ListaColaboradorFragment extends Fragment {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-
-
                 return false;
             }
-
-
         });
 
 

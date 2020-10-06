@@ -24,7 +24,7 @@ public class Conexao {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
             // Realiza a conexão SQL Server
             conn = DriverManager.getConnection(
-                    "jdbc:jtds:sqlserver://192.168.0.231;"+
+                    "jdbc:jtds:sqlserver://192.168.0.167;"+
                     "databaseName=PRAP3;user=sa;password=123456;");
 
             // MYSQL

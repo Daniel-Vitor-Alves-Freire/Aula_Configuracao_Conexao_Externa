@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/sv_busca"
-        android:pointerIcon="hand"
-        app:queryHint="Digite o nome do colaborador"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:id="@+id/sv_buscar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:pointerIcon="hand"
+        android:inputType="text"
+        app:queryHint="@string/pesquisa_colab"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
@@ -30,4 +30,5 @@
         tools:listitem="@layout/fragment_lista_colaborador" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
+
 

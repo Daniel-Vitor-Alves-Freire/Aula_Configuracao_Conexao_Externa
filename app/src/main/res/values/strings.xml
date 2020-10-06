@@ -9,4 +9,5 @@
     <string name="cargo">Cargo:</string>
     <string name="situa_o">Situação</string>
     <string name="title_lista_colaboradores">Lista de Colaboradores</string>
+    <string name="pesquisa_colab">Digite o nome do Colaborador...</string>
 </resources>
